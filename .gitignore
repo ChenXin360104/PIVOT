@@ -1,0 +1,12 @@
+.vscode/
+build/
+data/
+om3_data/
+m4_result/*
+images/*
+compareresult/*
+output/*
+node_modules/
+dist/
+
+*.zip
