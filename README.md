@@ -135,7 +135,7 @@ make
 cd ${project_dir}
 python3 scripts/createPhoto.py m4_result/ images/
 python3 scripts/comparePhoto.py images/ compareresult/
-ls compareresult/ | grep ours-cpp | awk -F'_' 'BEGIN{print "experiment,table,function,errorbound,width,time,ssim,memory(kb)"}{gsub(/,/, "I"); print $1,$2,$5,$10,$8,$14,$12,$16}' OFS=","| awk -F'.png' '{print $1}' > ./output/cpp_static.csv
+ls compareresult/ | grep ours-cpp | grep static | awk -F'_' 'BEGIN{print "experiment,table,function,errorbound,width,time,ssim,memory(kb)"}{gsub(/,/, "I"); print $1,$2,$5,$10,$8,$14,$12,$16}' OFS=","| awk -F'.png' '{print $1}' > ./output/cpp_static.csv
 ```
 
 ### Interaction Scenarios
@@ -167,5 +167,5 @@ make
 cd ${project_dir}
 python3 scripts/createPhoto.py m4_result/ images/
 python3 scripts/comparePhoto.py images/ compareresult/
-ls compareresult/ | grep ours-cpp | awk -F'_' 'BEGIN{print "experiment,table,function,errorbound,width,time,ssim,memory(kb)"}{gsub(/,/, "I"); print $1,$2,$5,$10,$8,$14,$12,$16}' OFS=","| awk -F'.png' '{print $1}' > ./output/ours-cpp_interaction.csv
+ls compareresult/ | grep ours-cpp | grep interaction | awk -F'_' 'BEGIN{print "experiment,table,function,errorbound,width,time,ssim,memory(kb)"}{gsub(/,/, "I"); print $1,$2,$5,$10,$8,$14,$12,$16}' OFS=","| awk -F'.png' '{print $1}' > ./output/ours-cpp_interaction.csv
 ```
