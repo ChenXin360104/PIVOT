@@ -75,7 +75,7 @@ pip3 install numpy matplotlib scikit-image
 
 2. Create directories for storing experiment results
 ```sh
-mkdir m4_result images compareresult
+mkdir m4_result images compareresult output
 ```
 
 ### Cold-start Scenarios
@@ -142,7 +142,7 @@ ls compareresult/ | grep ours-cpp | awk -F'_' 'BEGIN{print "experiment,table,fun
 
 2. Run the DuckDB to obtain the baseline results
 ```sh
-node scripts/applications.js interactions | grep experiment | awk 'BEGIN{print "experiment,table,function,width,time,memory(kb)"}{gsub(/,/, "I"); print $2,$5,$20,$23,$38,$41}' OFS="," > ../output/duck_interaction.csv
+node scripts/applications.js interactions | grep experiment | awk 'BEGIN{print "experiment,table,function,width,time,memory(kb)"}{gsub(/,/, "I"); print $2,$5,$20,$23,$38,$41}' OFS="," > ./output/duck_interaction.csv
 ```
 
 3. Compile PIVOT experiment and prepare data (if needed)
