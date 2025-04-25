@@ -67,17 +67,25 @@ void genDatainfo(SCREEN_M4 &screen_m4)
     {
 
         // todo 后面根据数据选取的时间段进行调整。
-        screen_m4.globalIntervalStartTime = 1420041600;
-        screen_m4.globalIntervalEndTime = 1704038399;
-        screen_m4.delta = 60;
+        screen_m4.dataStartTime = 1420041600;
+        screen_m4.dataEndTime = 1704038399;
+        screen_m4.dataDelta = 60;
+        screen_m4.dataCont = (screen_m4.dataEndTime-screen_m4.dataStartTime)/screen_m4.dataDelta + 1;
+
+        cout<<"screen_m4.dataCont:"<<screen_m4.dataCont<<endl;
+
+        if(screen_m4.screenEnd < 0){
+            screen_m4.screenStart = 0;
+            screen_m4.screenEnd =screen_m4.dataCont-1;
+        }
+        screen_m4.screenStartTimestamp = screen_m4.dataStartTime+(screen_m4.screenStart-0)*screen_m4.dataDelta;
 
         // 检查 func 是否为 null 或者 func.funName 是否为空
         if (func->funName.empty())
         {
             return;
         }
-
-        // 如果 func.funName 为 'ave' 或 'sum'
+        
         if (func->funName == "ave" || func->funName == "sum")
         {
             if (func->params == "hour")

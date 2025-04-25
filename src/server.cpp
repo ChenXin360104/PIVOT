@@ -314,7 +314,7 @@ int main() {
 
                     series_data.push_back(std::move(dp));
 
-                    dataMaxLen = std::max((double)dataMaxLen, (double)m4->end_time);
+                    dataMaxLen = screen_m4.dataCont;//std::max((double)dataMaxLen, (double)m4->end_time);
                 }
                 allSeries.push_back(std::move(series_data));
             }
