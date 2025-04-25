@@ -105,7 +105,8 @@ mkdir m4_result images compareresult output
 
 2. Run the DuckDB to obtain the baseline results
 ```sh
-node scripts/applications.js static | grep experiment | awk 'BEGIN{print "experiment,table,function,width,time,memory(kb)"}{gsub(/,/, "I"); print $2,$5,$20,$23,$38,$41}' OFS="," > ../output/duck_static.csv
+cd ${project_dir}/scripts
+node ./applications.js static | grep experiment | awk 'BEGIN{print "experiment,table,function,width,time,memory(kb)"}{gsub(/,/, "I"); print $2,$5,$20,$23,$38,$41}' OFS="," > ../output/duck_static.csv
 ```
 
 3. Compile PIVOT experiment and prepare data (if needed)
@@ -131,6 +132,7 @@ make
 
 5. Collect experiment results
 ```sh
+cd ${project_dir}
 python3 scripts/createPhoto.py m4_result/ images/
 python3 scripts/comparePhoto.py images/ compareresult/
 ls compareresult/ | grep ours-cpp | awk -F'_' 'BEGIN{print "experiment,table,function,errorbound,width,time,ssim,memory(kb)"}{gsub(/,/, "I"); print $1,$2,$5,$10,$8,$14,$12,$16}' OFS=","| awk -F'.png' '{print $1}' > ./output/cpp_static.csv
@@ -142,7 +144,8 @@ ls compareresult/ | grep ours-cpp | awk -F'_' 'BEGIN{print "experiment,table,fun
 
 2. Run the DuckDB to obtain the baseline results
 ```sh
-node scripts/applications.js interactions | grep experiment | awk 'BEGIN{print "experiment,table,function,width,time,memory(kb)"}{gsub(/,/, "I"); print $2,$5,$20,$23,$38,$41}' OFS="," > ./output/duck_interaction.csv
+cd ${project_dir}/scripts
+node ./applications.js interactions | grep experiment | awk 'BEGIN{print "experiment,table,function,width,time,memory(kb)"}{gsub(/,/, "I"); print $2,$5,$20,$23,$38,$41}' OFS="," > ../output/duck_interaction.csv
 ```
 
 3. Compile PIVOT experiment and prepare data (if needed)
@@ -161,6 +164,7 @@ make
 
 5. Collect experiment results
 ```sh
+cd ${project_dir}
 python3 scripts/createPhoto.py m4_result/ images/
 python3 scripts/comparePhoto.py images/ compareresult/
 ls compareresult/ | grep ours-cpp | awk -F'_' 'BEGIN{print "experiment,table,function,errorbound,width,time,ssim,memory(kb)"}{gsub(/,/, "I"); print $1,$2,$5,$10,$8,$14,$12,$16}' OFS=","| awk -F'.png' '{print $1}' > ./output/ours-cpp_interaction.csv
