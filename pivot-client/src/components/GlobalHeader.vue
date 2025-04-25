@@ -6,7 +6,7 @@
        PIVOT
       </a>
 
-      <a href="https://docs.google.com/document/d/1m2XpsjZgl6FHwlQK4e0V0yEHNjHLk6hpAQYcat0Fq-k/edit?usp=sharing">user guide</a>
+      <a href="https://docs.google.com/document/d/1RNhzro4HdUa7a9yOhelKUNIHlXKW6bUfBO6MKaLJH7E/edit?usp=sharing">user guide</a>
     
       <!-- <button type="button" class="btn btn-secondary" @click.prevent="openImportPanel">ImportData</button> -->
     </div>

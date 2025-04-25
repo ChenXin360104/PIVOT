@@ -366,7 +366,7 @@ export function drawViewChangeLineChart(lineChartObj: ViewChangeLineChartObj, li
         }else if(symbol == '*'){
             symbol='multi'
         }else if(symbol == '/'){
-            symbol='devide'
+            symbol='divide'
         }
     
         console.log(table_name,experiment,columns,symbol,'',width,height,mode,parallel,errorBound,startTime,endTime, interact_type, aggregate)
@@ -416,7 +416,7 @@ export function drawViewChangeLineChart(lineChartObj: ViewChangeLineChartObj, li
         }else if(symbol == '*'){
             symbol='multi'
         }else if(symbol == '/'){
-            symbol='devide'
+            symbol='divide'
         }
     
         // console.log(table_name,experiment,columns,symbol,'',width,height,mode,parallel,errorBound,startTime,endTime, interact_type, aggregate)

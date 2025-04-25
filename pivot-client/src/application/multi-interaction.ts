@@ -585,7 +585,7 @@ export function drawMultiTimeSeries(multiTimeSeriesObj: MultiTimeSeriesObj, line
         }else if(symbol == '*'){
             symbol='multi'
         }else if(symbol == '/'){
-            symbol='devide'
+            symbol='divide'
         }
     
         // console.log(table_name,experiment,columns,symbol,'',width,height,mode,parallel,errorBound,startTime,endTime, interact_type, aggregate)
@@ -642,7 +642,7 @@ export function drawMultiTimeSeries(multiTimeSeriesObj: MultiTimeSeriesObj, line
         }else if(symbol == '*'){
             symbol='multi'
         }else if(symbol == '/'){
-            symbol='devide'
+            symbol='divide'
         }
     
         console.log(table_name,experiment,columns,symbol,'',width,height,mode,parallel,errorBound,startTime,endTime, interact_type, aggregate)
@@ -709,7 +709,7 @@ export function drawMultiTimeSeries(multiTimeSeriesObj: MultiTimeSeriesObj, line
         }else if(symbol == '*'){
             symbol='multi'
         }else if(symbol == '/'){
-            symbol='devide'
+            symbol='divide'
         }
     
         console.log(table_name,experiment,columns,symbol,'',width,height,mode,parallel,errorBound,startTime,endTime, interact_type, aggregate)

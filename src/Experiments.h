@@ -3281,7 +3281,7 @@ std::string getFuncName(const std::string& symbol) {
         symbolName = "-";
     } else if (symbolName == "multi") {
         symbolName = "*";
-    } else if (symbolName == "devide") {
+    } else if (symbolName == "divide") {
         symbolName = "/";
     } else if (symbolName == "boxcox0") {
         symbolName = "boxcox_0";
@@ -3309,7 +3309,7 @@ std::string getSymbolName(const std::string &symbol)
         {"+", "plus"},
         {"-", "minus"},
         {"*", "multi"},
-        {"/", "devide"},
+        {"/", "divide"},
         {"boxcox_0", "boxcox0"},
         {"boxcox_1_2", "boxcox12"},
         {"boxcox_1", "boxcox1"},

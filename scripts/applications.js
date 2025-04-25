@@ -1736,7 +1736,7 @@ async function static(){
     let ablationStudy = ["s1", "s2", "s3", "s4"]
 
     let experiments = ["ours","PG-F","OM3","PG-M4", "IFX-M4", "IFX-F"]
-    let datasets = ["synthetic_1m 1,2,3,4,5", "synthetic_2m 1,2,3,4,5", "synthetic_4m 1,2,3,4,5", "synthetic_8m 1,2,3,4,5", "synthetic_16m 1,2,3,4,5", "synthetic_32m 1,2,3,4,5", "synthetic_64m 1,2,3,4,5", "synthetic_128m 1,2,3,4,5", "synthetic_256m 1,2,3,4,5", "synthetic512m5v 1,2,3,4,5"
+    let datasets = ["synthetic1m 1,2,3,4,5", "synthetic2m 1,2,3,4,5", "synthetic4m 1,2,3,4,5", "synthetic8m 1,2,3,4,5", "synthetic16m 1,2,3,4,5", "synthetic32m 1,2,3,4,5", "synthetic64m 1,2,3,4,5", "synthetic128m 1,2,3,4,5", "synthetic256m 1,2,3,4,5", "synthetic512m 1,2,3,4,5"
         , "nycsecond 7,9,1,2,3,4,5,6,8,10,11", "sensordata 5,4,3,2,1,7,6"]
     let functions=["func1", "boxcox_0", "+", "-", "*", "/", "mean", "variance", "max", "L2", "weightsum", "L22", "L2LN"]
     let widths = [1200]
@@ -1759,37 +1759,23 @@ async function static(){
      isParallel = false
 
 
-     // =================for test=======================
-     //datasets = ["nycdata 7,9,1,2,3,4,5,6,8,10,11", "traffic 1,2,3,4,5,6,7,8,9,10"]
-      //datasets = ["synthetic_1m 1,2,3,4,5"]
-    //   datasets = ["synthetic_1m 1,2,3,4,5", "synthetic_2m 1,2,3,4,5", "synthetic_4m 1,2,3,4,5"
-    //     , "nycdata 7,9,1,2,3,4,5,6,8,10,11", "soccerdata 5,3,1,2,4,6", "stockdata 9,5,1,2,3,4,6,7,8,10", "traffic 1,2,3,4,5,6,7,8,9,10"
-    //     , "synthetic_8m 1,2,3,4,5", "synthetic_16m 1,2,3,4,5", "sensordata 5,4,3,2,1,7,6", "synthetic_32m 1,2,3,4,5", "synthetic_64m 1,2,3,4,5"]
-
-    // datasets = ["synthetic_8m 1,2,3,4,5", "synthetic_16m 1,2,3,4,5"
-    //     , "nycdata 7,9,1,2,3,4,5,6,8,10,11", "soccerdata 5,3,1,2,4,6", "stockdata 9,5,1,2,3,4,6,7,8,10", "traffic 1,2,3,4,5,6,7,8,9,10"
-    //     ]
-
-    //     datasets = ["nycdata 7,9,1,2,3,4,5,6,8,10,11"]
-    //datasets = ["synthetic_1m 1,2,3,4,5", "synthetic_2m 1,2,3,4,5", "synthetic_4m 1,2,3,4,5", "synthetic_8m 1,2,3,4,5"]
+     
     datasets = [
         "sensordata 5,4,3,2,1,7,6"
         , "nycdata 7,9,1,2,3,4,5,6,8,10,11"
         , "soccerdata 5,3,1,2,4,6"
          ,"stockdata 9,5,1,2,3,4,6,7,8,10"
         //  ,"traffic 1,2,3,4,5,6,7,8,9,10"
-        // , "synthetic_1m 1,2,3,4,5"
-        // , "synthetic_2m 1,2,3,4,5"
-        // , "synthetic_4m 1,2,3,4,5"
-        // ,"synthetic_8m 1,2,3,4,5"
-        // ,"synthetic_16m 1,2,3,4,5"
-        // ,"synthetic_32m 1,2,3,4,5"
-        // ,"synthetic_64m 1,2,3,4,5"
-        // ,"synthetic_128m 1,2,3,4,5"
-        // ,"synthetic_256m 1,2,3,4,5"
-        // // ,"synthetic512m3v 1,2,3"
-        // // ,"synthetic1b3v 1,2,3"
-        //  ,"synthetic512m5v 1,2,3,4,5"
+        // , "synthetic1m 1,2,3,4,5"
+        // , "synthetic2m 1,2,3,4,5"
+        // , "synthetic4m 1,2,3,4,5"
+        // ,"synthetic8m 1,2,3,4,5"
+        // ,"synthetic16m 1,2,3,4,5"
+        ,"synthetic32m 1,2,3,4,5"
+        ,"synthetic64m 1,2,3,4,5"
+        ,"synthetic128m 1,2,3,4,5"
+        ,"synthetic256m 1,2,3,4,5"
+        // ,"synthetic512m 1,2,3,4,5"
         //  ,"synthetic1b5v 1,2,3,4,5"
     ]
     experiments = ["DUCK-F-AM4-THREAD-1", "DUCK-F-AM4-THREAD-16"
@@ -2176,7 +2162,7 @@ async function interactions(){
     let ablationStudy = ["s1", "s2", "s3", "s4"]
 
     let experiments = ["ours","case2","case3","case4","case5", "case6"]
-    let datasets = ["nycdata 7,9,1,2,3,4,5,6,8,10,11", "synthetic_8m 1,2,3,4,5", "sensordata 5,4,3,2,1,7,6", "soccerdata 5,3,1,2,4,6", "stockdata 9,5,1,2,3,4,6,7,8,10", "traffic 1,2,3,4,5,6,7,8,9,10", "synthetic_1m 1,2,3,4,5", "synthetic_2m 1,2,3,4,5", "synthetic_4m 1,2,3,4,5", "synthetic_16m 1,2,3,4,5", "synthetic_32m 1,2,3,4,5", "synthetic_64m 1,2,3,4,5", "synthetic_128m 1,2,3,4,5", "synthetic_256m 1,2,3,4,5"]
+    let datasets = ["nycdata 7,9,1,2,3,4,5,6,8,10,11", "synthetic8m 1,2,3,4,5", "sensordata 5,4,3,2,1,7,6", "soccerdata 5,3,1,2,4,6", "stockdata 9,5,1,2,3,4,6,7,8,10", "traffic 1,2,3,4,5,6,7,8,9,10", "synthetic1m 1,2,3,4,5", "synthetic2m 1,2,3,4,5", "synthetic4m 1,2,3,4,5", "synthetic16m 1,2,3,4,5", "synthetic32m 1,2,3,4,5", "synthetic64m 1,2,3,4,5", "synthetic128m 1,2,3,4,5", "synthetic256m 1,2,3,4,5"]
     let functions=["func1", "boxcox_0", "+", "-", "*", "/", "func4", "mean", "variance"]
     let widths = [200, 400, 600, 800, 1000, 1200]
     let errorbounds = [0.1, 0.05, 0.01, 0]
@@ -2186,7 +2172,7 @@ async function interactions(){
 
 
 
-    //datasets = ["synthetic_256m 1,2,3,4,5"]
+    //datasets = ["synthetic256m 1,2,3,4,5"]
     ablationStudy = ["s3"]
      // functions=["/"]
 
@@ -2206,18 +2192,16 @@ async function interactions(){
         ,"sensordata 5,4,3,2,1,7,6"
         ,"stockdata 9,5,1,2,3,4,6,7,8,10"
         ,"traffic 1,2,3,4,5,6,7,8,9,10"
-       , "synthetic_1m 1,2,3,4,5"
-       , "synthetic_2m 1,2,3,4,5"
-       , "synthetic_4m 1,2,3,4,5"
-       ,"synthetic_8m 1,2,3,4,5"
-       ,"synthetic_16m 1,2,3,4,5"
-       ,"synthetic_32m 1,2,3,4,5"
-       ,"synthetic_64m 1,2,3,4,5"
-       ,"synthetic_128m 1,2,3,4,5"
-       ,"synthetic_256m 1,2,3,4,5"
-       ,"synthetic512m3v 1,2,3"
-       ,"synthetic1b3v 1,2,3"
-        ,"synthetic512m5v 1,2,3,4,5"
+       , "synthetic1m 1,2,3,4,5"
+       , "synthetic2m 1,2,3,4,5"
+       , "synthetic4m 1,2,3,4,5"
+       ,"synthetic8m 1,2,3,4,5"
+       ,"synthetic16m 1,2,3,4,5"
+       ,"synthetic32m 1,2,3,4,5"
+       ,"synthetic64m 1,2,3,4,5"
+       ,"synthetic128m 1,2,3,4,5"
+       ,"synthetic256m 1,2,3,4,5"
+        ,"synthetic512m 1,2,3,4,5"
         ,"synthetic1b5v 1,2,3,4,5"
    ]
     experiments = ["DUCK-F-AM4-THREAD-1", "DUCK-F-AM4-THREAD-16"
@@ -2341,7 +2325,7 @@ function getFuncName(symbol) {
         symbolName = '-';
     } else if (symbolName == 'multi') {
         symbolName = '*';
-    } else if (symbolName == 'devide') {
+    } else if (symbolName == 'divide') {
         symbolName = '/';
     } else if (symbolName == 'boxcox0') {
         symbolName = 'boxcox_0';
@@ -2370,7 +2354,7 @@ function getSymbolName(symbol) {
     } else if (symbolName == '*') {
         symbolName = 'multi';
     } else if (symbolName == '/') {
-        symbolName = 'devide';
+        symbolName = 'divide';
     } else if (symbolName == 'boxcox_0') {
         symbolName = 'boxcox0';
     } else if (symbolName == 'boxcox_1_2') {

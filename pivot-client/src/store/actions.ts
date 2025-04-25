@@ -296,7 +296,7 @@ const computeLineTransform: ActionHandler<GlobalState, GlobalState> = (context: 
     }else if(symbol == '*'){
         symbol='multi'
     }else if(symbol == '/'){
-        symbol='devide'
+        symbol='divide'
     }
 
 
