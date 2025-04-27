@@ -76,7 +76,7 @@ void genDatainfo(SCREEN_M4 &screen_m4)
 
         if(screen_m4.screenEnd < 0){
             screen_m4.screenStart = 0;
-            screen_m4.screenEnd =screen_m4.dataCont-1;
+            // screen_m4.screenEnd =screen_m4.dataCont-1;
         }
         screen_m4.screenStartTimestamp = screen_m4.dataStartTime+(screen_m4.screenStart-0)*screen_m4.dataDelta;
 
